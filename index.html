@@ -21,12 +21,17 @@
             <p>Volume</p>
         </button>
     </div>
-    <div class="perguntas" id="perguntas">
-        <h2>Isso aqui é uma pergunta ?</h2>
-        <button>Sim</button>
-        <button>Não</button>
-        <button>Talvez ?</button>
-        <button>Só o tempo dirá</button>
+    <div class="quiz" id="quiz">
+        <h2 id="pergunta">Isso aqui é uma pergunta ?</h2>
+        <div class="respostas">
+            <button class="resposta" id="a" onclick="verificaResposta('a')">Sim</button>
+            <button class="resposta" id="b" onclick="verificaResposta('b')">Não</button>
+            <button class="resposta" id="c" onclick="verificaResposta('c')">Talvez ?</button>
+            <button class="resposta" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
+            <p id="acertos">Você acertou 0 perguntas</p>
+            <p id="premio">Você tem : R$ 0,00</p>
+        </div>
+        <div id="progress"><div class="prog"></div></div>
     </div>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/slick.js"></script>
