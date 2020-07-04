@@ -74,7 +74,16 @@ button:focus{
     color:darkolivegreen;
     border: 2px solid darkolivegreen;
     border-radius: 15px;
-    
+}
+
+.menu button:hover{
+    background-color:rgb(235, 217, 190);
+    cursor: pointer;
+}
+
+.menu button:active{
+    background-color:rgb(216, 204, 187);
+    cursor: pointer;
 }
 
 .menu-iniciar{
@@ -197,8 +206,11 @@ button:focus{
     background-color: rgb(220, 216, 245);
 }
 
-.pontos-principais p{
-    
+.pontos-principais div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .pontos-secundarios{
@@ -211,7 +223,7 @@ button:focus{
     height: 40%;
 }
 
-.pontos-secundarios p{
+.pontos-secundarios div{
     display: flex;
     align-items: center;
     justify-content: center;

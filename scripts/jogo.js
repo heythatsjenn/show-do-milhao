@@ -83,10 +83,10 @@ function randomiza(array){
 
 //Printa as perguntas na tela.
 function criaPergunta (){
+    reais[0].innerHTML = premios[pontuacao + 1]+ " R$!";
+    reais[1].innerHTML = premios[pontuacao] + " R$!";
+    reais[2].innerHTML = premios[pontuacao]/2 + " R$!";
     let p = perguntas[perguntaAtual];
-    reais[0].innerHTML = "<p> Você acumulará " + premios[pontuacao + 1] + " R$ se acertar essa!</p>";
-    reais[1].innerHTML = "<p> Você ganhará " + premios[pontuacao] + " R$ se desistir!</p>";
-    reais[2].innerHTML = "<p> Você ganhará " + premios[pontuacao]/2 + " R$ se errar essa!</p>";
     pergunta.innerHTML = "<h2>" + p.pergunta + "</h2>";
     respostaA.innerHTML = "<p>" + p.respostaA + "</p>";
     respostaB.innerHTML = "<p>" + p.respostaB + "</p>";
