@@ -141,6 +141,7 @@ function jogo(){
 function jogarNovamente(){
     conteudoQuiz.classList.remove('esconder');
     popUp.classList.remove('slide-up');
+    contadorDePulos = 0;
     perguntaAtual = 0;
     pontuacao = 0;
     premioTotal = 0;
@@ -153,7 +154,6 @@ function jogarNovamente(){
 function pularPergunta(){
     if(contadorDePulos<1 && perguntaAtual < ultimaPergunta){
         pontuacao++;
-        premioTotal = premios[pontuacao];
         acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
         premio.innerHTML = "<p> Você acumulou " + premioTotal + " R$!</p>";
         perguntaAtual++;
@@ -175,7 +175,7 @@ function gameOver(opcaoEscolhida){
             mensagem.innerHTML="<h2>Poxa, você perdeu tudo :C</h2>"
         }
         else{
-            mensagem.innerHTML="<h2>Que pena, você só ganhou"+ premioTotal+"</h2>";
+            mensagem.innerHTML="<h2>Que pena, você só ganhou"+ premioTotal+" reais</h2>";
         }
         
     }
