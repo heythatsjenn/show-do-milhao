@@ -24,7 +24,9 @@
     
     <div class="quiz" id="quiz">
         <div class="quiz-conteudo" id="quiz-conteudo">
-            <h2 id="pergunta">Isso aqui é uma pergunta ?</h2>
+            <div class="pergunta">
+                <h2 id="pergunta">Isso aqui é uma pergunta ?</h2>
+            </div>
             <div class="respostas">
                 <button class="resposta" id="a" onclick="verificaResposta('a')">Sim</button>
                 <button class="resposta" id="b" onclick="verificaResposta('b')">Não</button>
@@ -38,6 +40,15 @@
         <div class="game-over" id="game-over">
             <h2 id="mensagem">Alo</h2>
             <button onclick="jogarNovamente()">Jogar novamente ?</button>
+        </div>
+    </div>
+    <div class="pontos" id="pontos">
+        <div class="pontos-principais">
+            <p class="reais">Pontos que você ganhará agora :</p>
+        </div>
+        <div class="pontos-secundarios">
+            <p class="reais">Pontos que você ganhará se desistir </p>
+            <p class="reais">Pontos que você ganhará perderá </p>
         </div>
     </div>
     <script src="./scripts/script.js"></script>

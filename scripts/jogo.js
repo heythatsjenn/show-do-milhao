@@ -61,6 +61,7 @@ let premioTotal = 0;
 let mensagem = document.getElementById('mensagem');
 let conteudoQuiz = document.getElementById('quiz-conteudo');
 let popUp = document.getElementById('game-over');
+let reais = document.getElementsByClassName('reais');
 
 
 //Usando o algoritmo de Fisher-Yates para randomizar a array de perguntas. //
@@ -83,6 +84,9 @@ function randomiza(array){
 //Printa as perguntas na tela.
 function criaPergunta (){
     let p = perguntas[perguntaAtual];
+    reais[0].innerHTML = "<p> Você acumulará " + premios[pontuacao + 1] + " R$ se acertar essa!</p>";
+    reais[1].innerHTML = "<p> Você ganhará " + premios[pontuacao] + " R$ se desistir!</p>";
+    reais[2].innerHTML = "<p> Você ganhará " + premios[pontuacao]/2 + " R$ se errar essa!</p>";
     pergunta.innerHTML = "<h2>" + p.pergunta + "</h2>";
     respostaA.innerHTML = "<p>" + p.respostaA + "</p>";
     respostaB.innerHTML = "<p>" + p.respostaB + "</p>";
@@ -98,7 +102,6 @@ function verificaResposta(opcaoEscolhida){
             pontuacao++;
             premioTotal = premios[pontuacao];
             acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
-            premio.innerHTML = "<p> Você acumulou " + premioTotal + " R$!</p>";
             perguntaAtual++;
             criaPergunta();
         }
