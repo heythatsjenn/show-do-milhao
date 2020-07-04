@@ -59,7 +59,6 @@ button:focus{
     background-size: initial;
     background-repeat: repeat-x;
     background-image: url(../imagens/dinheiro3.png);
-    overflow-y: visible;
 }
 
 .menu button{

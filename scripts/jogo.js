@@ -153,7 +153,6 @@ function jogarNovamente(){
 //Pula uma pergunta, sendo que essa pergunta é considerada um acerto.
 function pularPergunta(){
     if(contadorDePulos<1 && perguntaAtual < ultimaPergunta){
-        pontuacao++;
         acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
         premio.innerHTML = "<p> Você acumulou " + premioTotal + " R$!</p>";
         perguntaAtual++;
