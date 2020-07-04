@@ -21,19 +21,27 @@
             <p>Volume</p>
         </button>
     </div>
+    
     <div class="quiz" id="quiz">
-        <h2 id="pergunta">Isso aqui é uma pergunta ?</h2>
-        <div class="respostas">
-            <button class="resposta" id="a" onclick="verificaResposta('a')">Sim</button>
-            <button class="resposta" id="b" onclick="verificaResposta('b')">Não</button>
-            <button class="resposta" id="c" onclick="verificaResposta('c')">Talvez ?</button>
-            <button class="resposta" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
-            <p id="acertos">Você acertou 0 perguntas</p>
-            <p id="premio">Você tem : R$ 0,00</p>
+        <div class="quiz-conteudo" id="quiz-conteudo">
+            <h2 id="pergunta">Isso aqui é uma pergunta ?</h2>
+            <div class="respostas">
+                <button class="resposta" id="a" onclick="verificaResposta('a')">Sim</button>
+                <button class="resposta" id="b" onclick="verificaResposta('b')">Não</button>
+                <button class="resposta" id="c" onclick="verificaResposta('c')">Talvez ?</button>
+                <button class="resposta" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
+                <p id="acertos">Você acertou 0 perguntas</p>
+                <p id="premio">Você tem : R$ 0,00</p>
+                <button onclick="pularPergunta()">Pular pergunta</button>
+            </div>
         </div>
-        <div id="progress"><div class="prog"></div></div>
+        <div class="game-over" id="game-over">
+            <h2 id="mensagem">Alo</h2>
+            <button onclick="jogarNovamente()">Jogar novamente ?</button>
+        </div>
     </div>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/jogo.js"></script>
     <script src="./scripts/slick.js"></script>
 </body>
 </html>
