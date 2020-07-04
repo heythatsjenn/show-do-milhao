@@ -157,6 +157,7 @@ function pularPergunta(){
         acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
         premio.innerHTML = "<p> Você acumulou " + premioTotal + " R$!</p>";
         perguntaAtual++;
+        contadorDePulos++;
         criaPergunta();
     }
 }
