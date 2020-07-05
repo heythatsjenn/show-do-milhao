@@ -54,7 +54,7 @@ let respostaD = document.getElementById('d');
 let acertos = document.getElementById('acertos');
 let premio = document.getElementById('premio');
 let pontuacao = 0;
-let ultimaPergunta = perguntas.length - 1;
+let ultimaPergunta = 16;
 let perguntaAtual = 0;
 let contadorDePulos = 0;
 let premioTotal = 0;
@@ -62,6 +62,7 @@ let mensagem = document.getElementById('mensagem');
 let conteudoQuiz = document.getElementById('quiz-conteudo');
 let popUp = document.getElementById('game-over');
 let reais = document.getElementsByClassName('reais');
+let perdeTudo = document.getElementById('perde-tudo');
 
 
 //Usando o algoritmo de Fisher-Yates para randomizar a array de perguntas. //
@@ -86,6 +87,10 @@ function criaPergunta (){
     reais[0].innerHTML = premios[pontuacao + 1]+ " R$!";
     reais[1].innerHTML = premios[pontuacao] + " R$!";
     reais[2].innerHTML = premios[pontuacao]/2 + " R$!";
+    if (perguntaAtual == ultimaPergunta) {
+        perdeTudo.innerHTML ="<h3>Perdendo essa, você</h3>"
+        reais[2].innerHTML = "<p>Perde Tudo!</p>"
+    }
     let p = perguntas[perguntaAtual];
     pergunta.innerHTML = "<h2>" + p.pergunta + "</h2>";
     respostaA.innerHTML = "<p>" + p.respostaA + "</p>";
@@ -170,14 +175,14 @@ function gameOver(opcaoEscolhida){
     popUp.classList.add('slide-up');
 
     if(perguntas[perguntaAtual].certa == opcaoEscolhida){
-        mensagem.innerHTML="<h2>Parabéns, você ganhou" + premioTotal + "</h2>"
+        mensagem.innerHTML="<p>Parabéns, você ganhou" + premioTotal + "</p>"
     }
     else{
         if (premioTotal == 0) {
-            mensagem.innerHTML="<h2>Poxa, você perdeu tudo :C</h2>"
+            mensagem.innerHTML="<p>Poxa, você não ganhou nada :C</p>"
         }
         else{
-            mensagem.innerHTML="<h2>Que pena, você só ganhou"+ premioTotal+" reais</h2>";
+            mensagem.innerHTML="<p>Que pena, você só ganhou"+ premioTotal+" reais</p>";
         }
         
     }

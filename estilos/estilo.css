@@ -144,7 +144,7 @@ button:focus{
     border-bottom: 2px solid darkgray;
     border-radius: 10px;
     width:100%;
-    background-color: blanchedalmond;
+    background-color: rgb(241, 246, 255);
  }
 
  .respostas button:first-child{
@@ -152,12 +152,12 @@ button:focus{
 }
  .respostas button:hover{
      cursor: pointer;
-     background-color: rgb(226, 209, 182);
+     background-color: rgb(187, 190, 202);
  }
 
  .respostas button:active{
      cursor: pointer;
-     background-color: lightgray;
+     background-color: rgb(211, 211, 211);
  }
 
 .quiz-iniciar{
@@ -168,6 +168,7 @@ button:focus{
 
 .game-over{
     position: absolute;
+    padding: 5%;
     bottom: -80vh;
     display: flex;
     align-items: center;
@@ -175,7 +176,31 @@ button:focus{
     flex-direction: column;
     width: 80%;
     height: 80%;
-    background-color: lightcoral;
+    background-color: rgb(215, 218, 241);
+    border-radius: 10px;
+}
+
+.game-over p{
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.game-over button {
+    border: 0;
+    border-bottom: 5px solid rgb(72, 138, 138) ;
+    background-color: rgb(32, 182, 182);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.game-over button:hover{
+    cursor: pointer;
+    background-color: rgb(29, 161, 161);
+}
+
+.game-over button:active{
+    cursor: pointer;
+    border-bottom:  2px solid rgb(72, 138, 138) ;
 }
 
 .pontos{
@@ -195,7 +220,7 @@ button:focus{
 
 .pontos-principais{
     font-family: 'Raleway';
-    font-size: 25px;
+    font-size: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,7 +238,13 @@ button:focus{
     flex-direction: column;
 }
 
+.pontos p {
+    font-size: 1.2em;
+    margin-top: 0.2em;
+}
+
 .pontos-secundarios{
+    font-weight: 500;
     border-radius: 5px;
     font-family: 'Raleway';
     width: 100%;
