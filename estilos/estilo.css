@@ -160,7 +160,15 @@ button:focus{
  .respostas button:active{
      cursor: pointer;
      background-color: rgb(211, 211, 211);
- }
+    }
+
+.respostaCerta{
+    background-color: green!important;
+}
+
+.respostaErrada{
+    background-color: red!important;
+}
 
 .quiz-iniciar{
     transform: translateX(100%);

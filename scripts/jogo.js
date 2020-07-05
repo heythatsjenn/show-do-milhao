@@ -234,6 +234,10 @@ function verificaResposta(opcaoEscolhida){
             premioTotal = premios[pontuacao];
             acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
             perguntaAtual++;
+            document.getElementById(opcaoEscolhida).classList.add('respostaCerta');
+            setTimeout(() => {
+                document.getElementById(opcaoEscolhida).classList.remove('respostaCerta');
+            }, 300);
             setTimeout(() => {
                 criaPergunta();
             }, 300);
@@ -243,6 +247,10 @@ function verificaResposta(opcaoEscolhida){
             premioTotal = premios[pontuacao]/2;
             acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
             premio.innerHTML = "<p> Você ganhou " + premioTotal + " R$!</p>";
+            document.getElementById(opcaoEscolhida).classList.add('respostaErrada');
+            setTimeout(() => {
+                document.getElementById(opcaoEscolhida).classList.remove('respostaErrada');
+            }, 300);
             gameOver(opcaoEscolhida);
         }
     }
@@ -254,6 +262,10 @@ function verificaResposta(opcaoEscolhida){
             premioTotal = premios[pontuacao];
             acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
             premio.innerHTML = "<p> Você GANHOU " + premioTotal + " R$!</p>";
+            document.getElementById(opcaoEscolhida).classList.add('respostaCerta');
+            setTimeout(() => {
+                document.getElementById(opcaoEscolhida).classList.remove('respostaCerta');
+            }, 300);
             gameOver(opcaoEscolhida);
         }
 
@@ -262,6 +274,10 @@ function verificaResposta(opcaoEscolhida){
             premioTotal = 0;
             acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
             premio.innerHTML = "<p> Você nao ganhou nada :c </p>";
+            document.getElementById(opcaoEscolhida).classList.add('respostaErrada');
+            setTimeout(() => {
+                document.getElementById(opcaoEscolhida).classList.remove('respostaErrada');
+            }, 300);
             gameOver(opcaoEscolhida);
         }
     }
