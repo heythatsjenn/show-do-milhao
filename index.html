@@ -28,10 +28,10 @@
                 <h2 id="pergunta">Isso aqui é uma pergunta ?</h2>
             </div>
             <div class="respostas">
-                <button class="resposta" id="a" onclick="verificaResposta('a')">Sim</button>
-                <button class="resposta" id="b" onclick="verificaResposta('b')">Não</button>
-                <button class="resposta" id="c" onclick="verificaResposta('c')">Talvez ?</button>
-                <button class="resposta" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
+                <button class="resposta a" id="a" onclick="verificaResposta('a')">Sim</button>
+                <button class="resposta b" id="b" onclick="verificaResposta('b')">Não</button>
+                <button class="resposta c" id="c" onclick="verificaResposta('c')">Talvez ?</button>
+                <button class="resposta d" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
                 <p id="acertos">Você acertou 0 perguntas</p>
                 <p id="premio">Você tem : R$ 0,00</p>
                 <button onclick="pularPergunta()">Pular pergunta</button>
@@ -39,6 +39,7 @@
         </div>
         <div class="game-over" id="game-over">
             <h2 id="mensagem">Alo</h2>
+            <img id="game-over-imagem" src="./imagens/meh.jpg" alt="">
             <button onclick="jogarNovamente()">Jogar novamente</button>
         </div>
     </div>
