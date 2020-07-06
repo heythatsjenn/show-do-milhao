@@ -374,35 +374,36 @@ let perguntasFinal = [];
 
 
 function assignPerguntas(){
-    perguntasFacil = [];
-    perguntasMedio = [];
-    perguntasDificl = [];
-    perguntasFinal = [];
+    perguntasFacil = []
+    perguntasMedio = []
+    perguntasDificl = []
+    perguntasFinal = []
+    perguntas.forEach(element => {
+        console.log(element);
+        if( element.nivel == 1){
+            perguntasFacil.push(element);
+        }
+        else if(element.nivel == 2){
+            perguntasMedio.push(element);
+        }
+        else if(element.nivel == 3){
+            perguntasDificl.push(element);
+        } 
+        else if(element.nivel == 4){
+            perguntasFinal.push(element);
+        }
+        else{
+            console.log("Deu pênis pra esse elemento aqui");
+        }console.log(perguntasFacil[0]);
+    });
 }
-
-perguntas.forEach(element => {
-    if( element.nivel == 1){
-        perguntasFacil.push(element);
-    }
-    else if(element.nivel == 2){
-        perguntasMedio.push(element);
-    }
-    else if(element.nivel == 3){
-        perguntasDificl.push(element);
-    } 
-    else if(element.nivel == 4){
-        perguntasFinal.push(element);
-    }
-    else{
-        console.log("Deu pênis pra esse elemento aqui")
-    }
-});
 
 
 function verificaNivel(){
     if (0 <= pontuacao && pontuacao <= 4) {
         var tuple = achaPergunta(perguntasFacil);
         perguntasFacil.splice(tuple[1], 1);
+        console.log(tuple[0].pergunta);
         return tuple[0];
     }
     else if(5 <= pontuacao && pontuacao <= 9){
@@ -427,8 +428,8 @@ function randomInt(min, max) {
 }
 
 function achaPergunta(listaDePerguntas){
-    var indexDaPergunta = Math.randomInt(0, listaDePerguntas.length);
-    var perguntaAleatoria = perguntas[indexDaPergunta];
+    var indexDaPergunta = randomInt(0, listaDePerguntas.length);
+    var perguntaAleatoria = listaDePerguntas[indexDaPergunta];
     return [perguntaAleatoria, indexDaPergunta];
 }
 
