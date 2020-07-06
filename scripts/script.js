@@ -98,8 +98,9 @@ function printaCor(opcaoEscolhida){
 
 //Printa o popup de game-over
 function printaGameOver(opcaoEscolhida){
-
-    conteudoQuiz.classList.add('esconder');
+    setTimeout(() => {
+        conteudoQuiz.classList.add('esconder')
+    }, 200);
     popUp.classList.add('slide-up');
 
     if(perguntaAtual.certa == opcaoEscolhida){
