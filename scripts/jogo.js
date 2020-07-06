@@ -2,6 +2,123 @@
 
 let perguntas= [
     {
+        pergunta: "Qual a capital do Brasil?",
+        nivel: "1",
+        respostaA : "Rio de Janeiro",
+        respostaB : "São Paulo",
+        respostaC : "Brasília",
+        respostaD : "Belo Horizonte",
+        certa : "c"
+    },
+    {
+        pergunta: "Qual o menor país do mundo?",
+        nivel: "2",
+        respostaA : "Vaticano",
+        respostaB : "Serra Leoa",
+        respostaC : "Monaco",
+        respostaD : "Maldivas",
+        certa : "a"
+    },
+    {
+        pergunta: "Qual o maior país do mundo?",
+        nivel: "1",
+        respostaA : "China",
+        respostaB : "Índia",
+        respostaC : "Rússia",
+        respostaD : "Brasil",
+        certa : "c"
+    },
+    {
+        pergunta: "Qual o rio mais longo do mundo?",
+        nivel: "2",
+        respostaA : "Rio Nilo",
+        respostaB : "Rio Amazonas",
+        respostaC : "Rio Solimões",
+        respostaD : "Rio Madeira",
+        certa : "a"
+    },
+    {
+        pergunta: "Qual a cerveja mexicana mais famosa?",
+        nivel: "2",
+        respostaA : "Colorado",
+        respostaB : "Corona",
+        respostaC : "Heineken",
+        respostaD : "Budweiser",
+        certa : "b"
+    },
+    {
+        pergunta: "Qual a única vitamina que você não você encontra no ovo?",
+        nivel: "2",
+        respostaA : "Vitamina E",
+        respostaB : "Vitamina A",
+        respostaC : "Vitamina C",
+        respostaD : "Vitamina D",
+        certa : "d"
+    },
+    {
+        pergunta: "Qual é a fórmula química do sal de cozinha?",
+        nivel: "2",
+        respostaA : "H20",
+        respostaB : "H2SO4",
+        respostaC : "CO2",
+        respostaD : "NaCl",
+        certa : "d"
+    },
+    {
+        pergunta: "Qual o nome verdadeiro de David Bowie?",
+        nivel: "3",
+        respostaA : "Matt Cardle",
+        respostaB : "Freddie Mercury",
+        respostaC : "David Jones",
+        respostaD : "Tom Gayman",
+        certa : "c"
+    },
+    {
+        pergunta: "Quantos corações tem um polvo?",
+        nivel: "3",
+        respostaA : "3 corações",
+        respostaB : "8 corações",
+        respostaC : "Um coração",
+        respostaD : "6 corações",
+        certa : "a"
+    },
+    {
+        pergunta: "Qual o elemento da tabela periodica representado por Au?",
+        nivel: "2",
+        respostaA : "Aureo",
+        respostaB : "Uranio ",
+        respostaC : "Ouro",
+        respostaD : "Cobalto",
+        certa : "c"
+    },
+    {
+        pergunta: "George Orwell viajou para lutar em qual conflito?",
+        nivel: "4",
+        respostaA : "Segunda Guerra Mundial",
+        respostaB : "Guerra Civil Espanhola",
+        respostaC : "Guerra dos Canudos",
+        respostaD : "Guerra Civil Americana",
+        certa : "a"
+    },
+    {
+        pergunta: "Qual o animal nacional da Escócia?",
+        nivel: "3",
+        respostaA : "Dragão",
+        respostaB : "Leão",
+        respostaC : "Fada",
+        respostaD : "Unicórnio",
+        certa : "d"
+    },
+    {
+        pergunta: "Qual a cor da pilula que Neo engole em Matrix?",
+        nivel: "3",
+        respostaA : "Verde",
+        respostaB : "Azul",
+        respostaC : "Vermelho",
+        respostaD : "Laranha",
+        certa : "C"
+    },
+    {
         pergunta: "Quantos signos astrógicos fazem o zodíaco?",
         nivel: "1",
         respostaA : "9 signos",
@@ -378,6 +495,7 @@ function assignPerguntas(){
     perguntasMedio = []
     perguntasDificl = []
     perguntasFinal = []
+
     for (let index = 0; index < perguntas.length; index++) {
         element = perguntas[index];
         if( element.nivel == 1){
@@ -393,7 +511,7 @@ function assignPerguntas(){
             perguntasFinal.push(element);
         }
         else{
-            console.log("Deu pênis pra esse elemento aqui");
+            console.log("Esse elemento deu um erro");
         }
     }
 }
@@ -403,7 +521,6 @@ function verificaNivel(){
     if (0 <= pontuacao && pontuacao <= 4) {
         var tuple = achaPergunta(perguntasFacil);
         perguntasFacil.splice(tuple[1], 1);
-        console.log(tuple[0].pergunta);
         return tuple[0];
     }
     else if(5 <= pontuacao && pontuacao <= 9){
@@ -417,7 +534,7 @@ function verificaNivel(){
         return tuple[0];
     }
     else{
-        var tuple = achaPergunta(perguntasDificl);
+        var tuple = achaPergunta(perguntasFinal);
         perguntasFinal.splice(tuple[1], 1);
         return tuple[0];
     }
@@ -446,7 +563,7 @@ function printaPontos(){
 //Printa a pergunta atual na tela.
 function printaPergunta (){
     perguntaAtual = verificaNivel();
-    p = perguntaAtual;
+    p = perguntaAtual;  
 
     printaPontos();
 
@@ -482,7 +599,7 @@ function verificaResposta(opcaoEscolhida){
             setTimeout(() => {
                 document.getElementById(opcaoEscolhida).classList.remove('respostaErrada');
             }, 300);
-            gameOver(opcaoEscolhida);
+            printaGameOver(opcaoEscolhida);
         }
     }
     else if (pontuacao == ultimaPergunta-1) {
@@ -497,7 +614,7 @@ function verificaResposta(opcaoEscolhida){
             setTimeout(() => {
                 document.getElementById(opcaoEscolhida).classList.remove('respostaCerta');
             }, 300);
-            gameOver(opcaoEscolhida);
+            printaGameOver(opcaoEscolhida);
         }
 
         //caso a pessoa tenha errado a ultima pergunta.
@@ -509,7 +626,7 @@ function verificaResposta(opcaoEscolhida){
             setTimeout(() => {
                 document.getElementById(opcaoEscolhida).classList.remove('respostaErrada');
             }, 300);
-            gameOver(opcaoEscolhida);
+            printaGameOver(opcaoEscolhida);
         }
     }
 }
@@ -535,7 +652,7 @@ function jogarNovamente(){
 
 //Pula uma pergunta, sendo que essa pergunta é considerada um acerto.
 function pularPergunta(){
-    if(contadorDePulos<1 && pontuacao < ultimaPergunta-1){
+    if(contadorDePulos<3 && pontuacao < ultimaPergunta-1){
         acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
         premio.innerHTML = "<p> Você acumulou " + premioTotal + " R$!</p>";
         contadorDePulos++;
@@ -543,7 +660,7 @@ function pularPergunta(){
     }
 }
 
-function gameOver(opcaoEscolhida){
+function printaGameOver(opcaoEscolhida){
 
     conteudoQuiz.classList.add('esconder');
     popUp.classList.add('slide-up');
@@ -555,6 +672,7 @@ function gameOver(opcaoEscolhida){
     else{
         if (premioTotal == 0) {
             mensagem.innerHTML="<p>Poxa, você não ganhou nada :C</p>"
+            imagem.src= "./imagens/meh.jpg";
         }
         else{
             mensagem.innerHTML="<p>Que pena, você só ganhou "+ premioTotal+" reais</p>";

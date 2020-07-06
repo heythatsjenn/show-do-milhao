@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/fontawesome.min.js">
     <link rel="stylesheet" href="./estilos/estilo.css">
     <title>Show do Milhão</title>
 </head>
@@ -35,15 +36,15 @@
                 <p id="acertos">Você acertou 0 perguntas</p>
                 <p id="premio">Você tem : R$ 0,00</p>
                 <div class="opcoes">
-                    <button onclick="pularPergunta()">Pular pergunta</button>
-                    <button onclick="gameOver()">Desistir</button>
+                    <button class="opcao" onclick="pularPergunta()"><i class="fas fa-forward"></i><p>Pular</p></button>
+                    <button class="opcao"onclick="gameOver()"><i class="fas fa-sign-out-alt"></i><p>Desistir</p></button>
                 </div>
             </div>
         </div>
         <div class="game-over" id="game-over">
             <h2 id="mensagem">Alo</h2>
             <img id="game-over-imagem" src="./imagens/meh.jpg" alt="">
-            <button onclick="jogarNovamente()">Jogar novamente</button>
+            <button class="opcao" onclick="jogarNovamente()">Jogar novamente<i class="fas fa-undo"></i></button>
         </div>
     </div>
     <div class="pontos" id="pontos">
@@ -65,6 +66,8 @@
         </div>
     </div>
     <script src="./scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f3d875fca3.js" crossorigin="anonymous"></script>
     <script src="./scripts/jogo.js"></script>
     <script src="./scripts/slick.js"></script>
 </body>
