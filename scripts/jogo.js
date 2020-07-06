@@ -157,10 +157,10 @@ let perguntas= [
 {
         pergunta: "O rato roeu a roupa do rei de _____?",
         nivel: "1",
-        respostaA : "Espanha",
-        respostaB : "Inglaterra",
+        respostaA : "Portugal",
+        respostaB : "Paris",
         respostaC : "Roma",
-        respostaD : "França",
+        respostaD : "São Paulo",
         certa : "c"
     },
 {
@@ -260,7 +260,7 @@ let perguntas= [
         respostaB : "Pizza",
         respostaC : "Macarrão",
         respostaD : "Pudim",
-        certa : "c"
+        certa : "a"
     },
 {
         pergunta: "Qual o nome do cachorro do Superman?",
@@ -317,7 +317,7 @@ let perguntas= [
         certa : "c"
     },
 {
-        pergunta: "Em qual país o pintor Vincent van Gogh nasceu?",
+        pergunta: "Em qual país o pintor Vincent Van Gogh nasceu?",
         nivel: "2",
         respostaA : "Alemanha",
         respostaB : "Holanda",
@@ -382,7 +382,6 @@ function verificaNivel(){
     else{
         nivelAtual = 4;
     }
-    console.log(nivelAtual);
 }
 
 function randomInt(min, max) {
@@ -392,14 +391,13 @@ function randomInt(min, max) {
 function achaPergunta(){
     verificaNivel();
     contador = 0;
-    while(contador<100000){
+    while(contador<10000){
         var indexDaPergunta = randomInt(0, perguntas.length);
         var perguntaAleatoria = perguntas[indexDaPergunta];
         if (perguntaAleatoria.nivel == nivelAtual){
             return [perguntaAleatoria, indexDaPergunta];
         }
         contador++;
-        console.log(contador);
     }
 }
 
