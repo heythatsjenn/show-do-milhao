@@ -96,7 +96,7 @@ let perguntas= [
         respostaB : "Guerra Civil Espanhola",
         respostaC : "Guerra dos Canudos",
         respostaD : "Guerra Civil Americana",
-        certa : "a"
+        certa : "b"
     },
     {
         pergunta: "Qual o animal nacional da Escócia?",
