@@ -1,0 +1,92 @@
+.quiz{
+    position: absolute;
+    left: -40vw;
+    opacity: 0.3;
+    @include flexbox(column);
+    height: 100vh;
+    width: 40vw;
+    background-color:#ecffd9;
+    z-index: 2;
+ }
+
+ .quiz-iniciar{
+    transform: translateX(100%);
+    opacity: 1;
+    transition: transform 1s ease-in, opacity 1s ease-in;
+}
+
+ .quiz h2{
+     font-weight: normal;
+     font-size: 25px;
+     font-family: 'Raleway';
+     margin-bottom: 10px;
+ }
+
+ .quiz-conteudo{
+    @include flexbox(column);
+    width: 100%;
+ }
+
+ .pergunta{
+    -webkit-box-shadow: 1px 5px 16px 3px rgba(0,0,0,0.44); 
+    box-shadow: 1px 5px 16px 3px rgba(0,0,0,0.44);
+     padding: 5%;
+     width: 100%;
+     @include flexbox(column);
+     position: absolute;
+     top: 0;
+     height: 30%;
+     color: #000015;
+     background-color: #d9ffb2;
+ }
+
+ .respostas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 30vh;
+    height: 70vh;
+ }
+
+ .opcoes{
+    @include flexbox(row);
+ }
+
+ .opcoes .opcao{
+    padding: 10px;
+    width: 15vw;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: inline-block;
+ }
+
+ .respostas button{
+    border: 0;
+    padding: 5px;
+    border-radius: 10px;
+    width:80%;
+    background-color: #defdbf;
+ }
+
+ .respostas button p{
+     font-weight: normal;
+ }
+
+
+.respostaCerta{
+    background-color: green!important;
+}
+
+.respostas p{
+    font-family: 'Raleway';
+    font-weight: 500;
+
+}
+
+.respostaErrada{
+    background-color: red!important;
+}

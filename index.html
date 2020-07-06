@@ -15,12 +15,24 @@
         <button id="botao-jogar">
             <p>Jogar</p>
         </button>
-        <button>
+        <button id="botao-como-jogar">
             <p>Como Jogar</p>
         </button>
         <button>
             <p>Volume</p>
         </button>
+    </div>
+
+    <div class="como-jogar">
+        <button id="botao-como-jogar-sair"><i class="fas fa-times"></i></button>
+        <h2>Como Jogar</h2>
+        <h3>1. O Jogo</h3>
+        <p>O jogo tem um total de 16 perguntas, dividas em 4 fases. A cada fase, o valor e a dificuldade das perguntas aumenta, e o prêmio final é de 1 Milhão. </p>
+        <p>Caso o jogador erre uma pergunta, ele leva metade do prêmio que acumulou e o jogo acaba. Se ele errar a última pergunta, ele perde tudo.</p>
+        <p>Se o jogador desistir, ele leva todo o valor que acumulou.</p>
+        <p>O jogador tem direito a pular a pergunta 3 vezes, mas pular não se aplica à pergunta final.</p>
+        <h3>1. Os Controles</h3>
+        <p>Para desativar a música, é só clicar no botão música, mesma coisa para o volume.</p>
     </div>
     
     <div class="quiz" id="quiz">
@@ -29,15 +41,15 @@
                 <h2 id="pergunta">Isso aqui é uma pergunta ?</h2>
             </div>
             <div class="respostas">
-                <button class="resposta a" id="a" onclick="verificaResposta('a')">Sim</button>
-                <button class="resposta b" id="b" onclick="verificaResposta('b')">Não</button>
-                <button class="resposta c" id="c" onclick="verificaResposta('c')">Talvez ?</button>
-                <button class="resposta d" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
+                <button class="resposta" id="a" onclick="verificaResposta('a')">Sim</button>
+                <button class="resposta" id="b" onclick="verificaResposta('b')">Não</button>
+                <button class="resposta" id="c" onclick="verificaResposta('c')">Talvez ?</button>
+                <button class="resposta" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
                 <p id="acertos">Você acertou 0 perguntas</p>
                 <p id="premio">Você tem : R$ 0,00</p>
                 <div class="opcoes">
                     <button class="opcao" onclick="pularPergunta()"><i class="fas fa-forward"></i><p>Pular</p></button>
-                    <button class="opcao"onclick="gameOver()"><i class="fas fa-sign-out-alt"></i><p>Desistir</p></button>
+                    <button class="opcao" onclick="printaGameOver()"><i class="fas fa-sign-out-alt"></i><p>Desistir</p></button>
                 </div>
             </div>
         </div>
@@ -45,6 +57,7 @@
             <h2 id="mensagem">Alo</h2>
             <img id="game-over-imagem" src="./imagens/meh.jpg" alt="">
             <button class="opcao" onclick="jogarNovamente()">Jogar novamente<i class="fas fa-undo"></i></button>
+            <button class="opcao" onclick="voltar()">Voltar ao menu<i class="fas fa-sign-out-alt"></i></button>
         </div>
     </div>
     <div class="pontos" id="pontos">
@@ -65,10 +78,10 @@
             </div>
         </div>
     </div>
-    <script src="./scripts/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/f3d875fca3.js" crossorigin="anonymous"></script>
+    <script src="./scripts/perguntas.js"></script>
+    <script src="./scripts/script.js"></script>
     <script src="./scripts/jogo.js"></script>
-    <script src="./scripts/slick.js"></script>
 </body>
 </html>

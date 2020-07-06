@@ -1,0 +1,60 @@
+@import 'mixins-e-variaveis';
+@import 'logo';
+@import 'menu';
+@import 'como-jogar';
+@import 'quiz';
+@import 'game-over';
+@import 'pontos';
+@import 'media-queries';
+
+
+
+
+//Configurações gerais
+*{
+    overflow: hidden;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    font-size:20px;
+}
+
+**:root{
+    overflow: hidden;
+}
+
+html{
+    background-color: black;
+}
+
+body{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(../imagens/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flexbox(column);
+}
+
+button{
+    box-shadow:$sombra-padrao;
+}
+
+button:focus{
+    outline: 0;
+}
+
+.esconder{
+    display: none;
+}
+
+.slide-up{
+    transform: translateY(-90vh);
+    transition: transform 1s ease-in;
+}
+
+
+

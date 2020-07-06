@@ -1,0 +1,57 @@
+@media screen and(min-width: 768px){
+    .menu button:hover{
+        background-color:rgb(243, 196, 130);
+        cursor: pointer;
+    }
+    .respostas button:hover{
+        cursor: pointer;
+        background-color: rgb(178, 228, 203);
+    }
+    .game-over button:hover{
+        cursor: pointer;
+        background-color: rgb(146, 224, 224);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .logo-iniciar{
+        display: none;
+    }
+    .quiz{
+        left: -100vw;
+    }
+    .quiz-iniciar{
+        width: 100%;
+    }
+    .como-jogar{
+        left: -100vw;
+        border:none;
+        overflow-y: scroll;
+    }
+    .como-jogar-iniciar{
+        width: 100%;
+    }
+
+    .opcoes .opcao{
+     width: 40vw;   
+    }
+}
+
+@media screen and (max-width: 500px){
+    .logo{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .game-over img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 350px){
+    .menu button{
+        padding:5px;
+        font-size:16px;
+    }
+}

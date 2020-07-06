@@ -1,0 +1,53 @@
+.como-jogar {
+    text-align: center;
+    padding: 15px;
+    font-family: 'Raleway';
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    left: -40vw;
+    opacity: 0.3;
+    height: 100vh;
+    width: 40vw;
+    background-color: #ecffd9;
+    border-right: 2px solid black;
+    z-index: 2;
+  }
+
+ .como-jogar h2 {
+    font-weight: 600;
+    line-height: 30px;
+    color: rgb(0, 75, 0);
+    border-bottom: 2px solid rgb(1, 82, 1);
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .como-jogar h3 {
+    color: darkgreen;
+    text-align: left;
+    line-height: 30px;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .como-jogar p{
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+ .como-jogar-iniciar{
+    transform: translateX(100%);
+    opacity: 1;
+    transition: transform 1s ease-in, opacity 1s ease-in;
+ }
+
+ .como-jogar button{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }

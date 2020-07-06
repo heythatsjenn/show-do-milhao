@@ -1,1 +1,0 @@
-$('.como-jogar').slick();

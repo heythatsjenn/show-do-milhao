@@ -1,0 +1,10 @@
+//Mixins
+@mixin flexbox($direcao){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direcao;
+}
+
+//Variáveis
+$sombra-padrao : 4px 4px 8px 0px rgba(50, 50, 50, 0.75);
