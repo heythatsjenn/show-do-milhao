@@ -112,9 +112,9 @@ let perguntas= [
         nivel: "3",
         respostaA : "Verde",
         respostaB : "Azul",
-        respostaC : "Vermelho",
+        respostaC : "Vermelha",
         respostaD : "Laranha",
-        certa : "C"
+        certa : "c"
     },
     {
         pergunta: "Quantos signos astrógicos fazem o zodíaco?",
