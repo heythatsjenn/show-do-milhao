@@ -11,18 +11,38 @@
 }
 
 .menu button{
-    margin: 0 3%;
+    margin: 0 1%;
     padding: 7px;
     background-color:blanchedalmond;
     color:darkolivegreen;
     border: 2px solid darkolivegreen;
     border-radius: 10px;
+    
 }
-
 
 .menu button:active{
     background-color:rgb(236, 209, 172);
     cursor: pointer;
+}
+
+.menu .audio{
+    color: black;
+    border: 2px solid darkolivegreen;
+    background-color: #6AFB92;
+}
+
+.menu .audio:hover{
+    background-color: #a2fabb;
+}
+
+.menu .audio-ativo{
+    color: white;
+    border: 2px solid darkred;
+    background-color: red;
+}
+
+.menu .audio-ativo:hover{
+    background-color: rgb(252, 134, 134);
 }
 
 .menu-iniciar{

@@ -18,8 +18,14 @@
         <button id="botao-como-jogar">
             <p>Como Jogar</p>
         </button>
-        <button>
-            <p>Volume</p>
+        <button class="audio" id="botao-sons">
+            <audio id="som-perder" src="sons/som-perder.mp3"></audio>
+            <audio id="som-ganhar" src="sons/som-ganhar.mp3"></audio>
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <button class="audio" id="botao-musica">
+            <audio id="musica" loop src="./sons/musica-abertura.mp3" autoplay> </audio>
+            <i class="fas fa-music"></i>
         </button>
     </div>
 
@@ -45,7 +51,7 @@
                 <button class="resposta" id="b" onclick="verificaResposta('b')">Não</button>
                 <button class="resposta" id="c" onclick="verificaResposta('c')">Talvez ?</button>
                 <button class="resposta" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
-                <p id="acertos">Você acertou 0 perguntas</p>
+                <p id="acertos">Você acertou 0 perguntas de 16!</p>
                 <p id="premio">Você tem : R$ 0,00</p>
                 <div class="opcoes">
                     <button class="opcao" onclick="pularPergunta()"><i class="fas fa-forward"></i><p>Pular</p></button>

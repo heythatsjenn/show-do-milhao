@@ -2,6 +2,8 @@ const menuInicial = document.getElementById('menu');
 const logo = document.getElementById('logo');
 const botaoJogar = document.getElementById('botao-jogar');
 const botaoComoJogar = document.getElementById('botao-como-jogar');
+const botaoMusica = document.getElementById('botao-musica');
+const botaoSons = document.getElementById('botao-sons');
 const botaoComoJogarSair = document.getElementById('botao-como-jogar-sair');
 const card = document.getElementById('card');
 const quiz = document.getElementById('quiz');
@@ -21,10 +23,12 @@ let popUp = document.getElementById('game-over');
 let reais = document.getElementsByClassName('reais');
 let perdeTudo = document.getElementById('perde-tudo');
 let opcao = document.getElementsByClassName('opcao');
+let musica = document.getElementById('musica');
+let somTriste = document.getElementById('som-perder');
+let somFeliz = document.getElementById('som-ganhar');
 
-//Inicializa a UI do jogo
-botaoJogar.addEventListener('click', iniciar);
 
+// Abre/fecha a guia Como Jogar
 botaoComoJogar.addEventListener('click',() =>{
     comoJogar[0].classList.add("como-jogar-iniciar");
 });
@@ -32,6 +36,59 @@ botaoComoJogar.addEventListener('click',() =>{
 botaoComoJogarSair.addEventListener('click', () =>{
     comoJogar[0].classList.remove("como-jogar-iniciar");
 });
+
+
+// Toca a música tema do Show do Milhão
+botaoMusica.addEventListener('click', tocaMusica);
+
+musica.play();
+let contadorMusica = 0;
+
+function tocaMusica(){
+    if(contadorMusica%2 == 0){
+        musica.pause();
+        botaoMusica.classList.remove('audio');
+        botaoMusica.classList.add('audio-ativo');
+    }
+    else{
+        musica.play();
+        botaoMusica.classList.remove('audio-ativo');
+        botaoMusica.classList.add('audio');
+    }
+    contadorMusica++;
+        
+}
+
+// Toca os sons
+
+let contadorSons = 0;
+
+botaoSons.addEventListener('click', ()=>{
+    if (contadorSons%2 == 0) {
+        botaoSons.classList.remove('audio');
+        botaoSons.classList.add('audio-ativo');
+    }
+    else{
+        botaoSons.classList.add('audio');
+        botaoSons.classList.remove('audio-ativo');
+    }
+    contadorSons++;
+});
+
+function tocaSomTriste(){
+    if(contadorSons%2 == 0){
+        somTriste.play();
+    }
+}
+
+function tocaSomFeliz(){
+    if(contadorSons%2 == 0){
+        somFeliz.play();
+    }
+}
+
+//Inicializa a UI do jogo
+botaoJogar.addEventListener('click', iniciar);
 
 //Começa o jogo
 function iniciar() {
@@ -106,15 +163,18 @@ function printaGameOver(opcaoEscolhida){
     if(perguntaAtual.certa == opcaoEscolhida){
         imagem.src = "./imagens/happy.jpg";
         mensagem.innerHTML="<p>Parabéns, você ganhou " + premioTotal + "</p>"
+        tocaSomFeliz();
     }
     else{
         if (premioTotal == 0) {
             mensagem.innerHTML="<p>Poxa, você não ganhou nada :C</p>"
             imagem.src= "./imagens/meh.jpg";
+            tocaSomTriste();
         }
         else{
             mensagem.innerHTML="<p>Que pena, você só ganhou "+ premioTotal+" reais</p>";
             imagem.src= "./imagens/sad.jpg";
+            tocaSomTriste();
         }
         
     }

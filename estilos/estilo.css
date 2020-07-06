@@ -37,7 +37,7 @@
 }
 
 .menu button {
-  margin: 0 3%;
+  margin: 0 1%;
   padding: 7px;
   background-color: blanchedalmond;
   color: darkolivegreen;
@@ -48,6 +48,26 @@
 .menu button:active {
   background-color: #ecd1ac;
   cursor: pointer;
+}
+
+.menu .audio {
+  color: black;
+  border: 2px solid darkolivegreen;
+  background-color: #6AFB92;
+}
+
+.menu .audio:hover {
+  background-color: #a2fabb;
+}
+
+.menu .audio-ativo {
+  color: white;
+  border: 2px solid darkred;
+  background-color: red;
+}
+
+.menu .audio-ativo:hover {
+  background-color: #fc8686;
 }
 
 .menu-iniciar {
@@ -434,6 +454,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  #acertos {
+    display: none;
+  }
+  #premio {
+    display: none;
+  }
   .menu button:hover {
     background-color: #f3c482;
     cursor: pointer;
@@ -449,6 +475,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .pontos-iniciar {
+    -webkit-transform: translateY(1vh);
+            transform: translateY(1vh);
+  }
   .logo-iniciar {
     display: none;
   }

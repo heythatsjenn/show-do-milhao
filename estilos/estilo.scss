@@ -7,9 +7,6 @@
 @import 'pontos';
 @import 'media-queries';
 
-
-
-
 //Configurações gerais
 *{
     overflow: hidden;
@@ -52,9 +49,6 @@ button:focus{
 }
 
 .slide-up{
-    transform: translateY(-90vh);
+    transform: translateY(-90vh); 
     transition: transform 1s ease-in;
 }
-
-
-
