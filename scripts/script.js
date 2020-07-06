@@ -23,7 +23,7 @@ let popUp = document.getElementById('game-over');
 let reais = document.getElementsByClassName('reais');
 let perdeTudo = document.getElementById('perde-tudo');
 let opcao = document.getElementsByClassName('opcao');
-let musica = document.getElementById('musica');
+var musica = document.getElementById('musica');
 let somTriste = document.getElementById('som-perder');
 let somFeliz = document.getElementById('som-ganhar');
 
@@ -41,6 +41,7 @@ botaoComoJogarSair.addEventListener('click', () =>{
 // Toca a música tema do Show do Milhão
 botaoMusica.addEventListener('click', tocaMusica);
 
+musica.volume = 0.2;
 musica.play();
 let contadorMusica = 0;
 
@@ -62,6 +63,8 @@ function tocaMusica(){
 // Toca os sons
 
 let contadorSons = 0;
+somFeliz.volume = 0.7;
+somTriste.volume = 0.7;
 
 botaoSons.addEventListener('click', ()=>{
     if (contadorSons%2 == 0) {
