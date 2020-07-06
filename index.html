@@ -34,7 +34,10 @@
                 <button class="resposta d" id="d" onclick="verificaResposta('d')">Só o tempo dirá</button>
                 <p id="acertos">Você acertou 0 perguntas</p>
                 <p id="premio">Você tem : R$ 0,00</p>
-                <button onclick="pularPergunta()">Pular pergunta</button>
+                <div class="opcoes">
+                    <button onclick="pularPergunta()">Pular pergunta</button>
+                    <button onclick="gameOver()">Desistir</button>
+                </div>
             </div>
         </div>
         <div class="game-over" id="game-over">
@@ -46,17 +49,17 @@
     <div class="pontos" id="pontos">
         <div class="pontos-principais">
             <div>
-                <h3>Acertando essa, você ganha</h3>
+                <h3>Acertando, você ganha</h3>
                 <p class="reais">20</p>
             </div>
         </div>
         <div class="pontos-secundarios">
             <div> 
-                <h3>Desistindo dessa, você ganha</h3>
+                <h3>Desistindo, você ganha</h3>
                 <p class="reais">10</p>
             </div>
             <div>
-                <h3 id="perde-tudo">Perdendo essa, você ganha</h3>
+                <h3 id="perde-tudo">Perdendo, você ganha</h3>
                 <p class="reais">50</p>
             </div>
         </div>

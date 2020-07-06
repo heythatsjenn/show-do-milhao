@@ -137,16 +137,212 @@ let perguntas= [
         certa : "b"
     },
     {
-        pergunta: "Estamos em falta de perguntas nível 4, mas você quer ser milionário?",
-        nivel: "4",
-        respostaA : "Claro que sim!",
-        respostaB : "Não, odeio a burguesia!",
-        respostaC : "É óbvio, sou uma material girl!",
-        respostaD : "Ah, eu até gosto desse filme",
+        pergunta: "Qual o videogame mais novo da Nintendo?",
+        nivel: "2",
+        respostaA : "Zelda",
+        respostaB : "Super Nintendo",
+        respostaC : "Nintendo Switch",
+        respostaD : "Super Mario",
         certa : "c"
     },
-
-    
+    {
+        pergunta: "Qual é o terceiro mês do ano?",
+        nivel: "1",
+        respostaA : "Fevereiro",
+        respostaB : "Março",
+        respostaC : "Junho",
+        respostaD : "Abril",
+        certa : "b"
+    },
+{
+        pergunta: "O rato roeu a roupa do rei de _____?",
+        nivel: "1",
+        respostaA : "Espanha",
+        respostaB : "Inglaterra",
+        respostaC : "Roma",
+        respostaD : "França",
+        certa : "c"
+    },
+{
+        pergunta: "O corpo do ser humano é, em sua maior parte, formato pelo átomo:",
+        nivel: "3",
+        respostaA : "Oxigênio",
+        respostaB : "Carbono",
+        respostaC : "Nitrogênio",
+        respostaD : "Hidrogênio",
+        certa : "a"
+    },
+{
+        pergunta: "O que é mais rápido?",
+        nivel: "1",
+        respostaA : "Luz",
+        respostaB : "Foguetes Espaciais",
+        respostaC : "Cometa",
+        respostaD : "Carro da Ferrari",
+        certa : "a"
+    },
+{
+        pergunta: "No primeiro filme de Harry Potter, o que o vilão almeja?",
+        nivel: "1",
+        respostaA : "A Águia de Fogo",
+        respostaB : "A Varinha de Merlin",
+        respostaC : "O Fogo Eterno",
+        respostaD : "A Pedra Filosofal",
+        certa : "d"
+    },
+{
+        pergunta: "Qual a arma principal de um Jedi?",
+        nivel: "2",
+        respostaA : "Pistola Laser",
+        respostaB : "Sabre de Luz",
+        respostaC : "Bastão de Energia",
+        respostaD : "Hadouken",
+        certa : "b"
+    },
+{
+        pergunta: "Qual o nome do jogo mais vendido do mundo?",
+        nivel: "3",
+        respostaA : "Super Mario Bros.",
+        respostaB : "Tetris",
+        respostaC : "Minecraft",
+        respostaD : "Grand Theft Auto V",
+        certa : "c"
+    },
+{
+        pergunta: "Quantos kilogramas de plástico vai pro oceano por ano em média?",
+        nivel: "4",
+        respostaA : "8 bilhões de kilogramas",
+        respostaB : "400 milhões de kilogramas",
+        respostaC : "10 mil kilogramas",
+        respostaD : "250 milhões de kilogramas",
+        certa : "a"
+    },
+{
+        pergunta: "Qual o prédio mais alto do mundo?",
+        nivel: "4",
+        respostaA : "Burj Khalifa",
+        respostaB : "Shangai Tower",
+        respostaC : "Taipei 101",
+        respostaD : "China Zun",
+        certa : "a"
+    },
+{
+        pergunta: "Quantas moléculas de água, aproximadamente, há numa gota?",
+        nivel: "4",
+        respostaA : "2 sextilhões",
+        respostaB : "4 trilhões ",
+        respostaC : "100 bilhões",
+        respostaD : "300 decilhões",
+        certa : "a"
+    },
+{
+        pergunta: "Qual a fala clássica do Pernalonga?",
+        nivel: "1",
+        respostaA : "Olá, tudo bem?",
+        respostaB : "E aí, tudo em cima?",
+        respostaC : "O que que há, velhinho?",
+        respostaD : "Oi, sou o Pernalonga",
+        certa : "c"
+    },
+{
+        pergunta: "Qual o nome da irmã do Cebolinha, personagem da Turma da Mônica?",
+        nivel: "3",
+        respostaA : "Maria Cebolinha",
+        respostaB : "Jeniffer Cebolinha",
+        respostaC : "Jéssica Cebolinha",
+        respostaD : "Matilda Cebolinha",
+        certa : "a"
+    },
+{
+        pergunta: "Qual é o famoso prato russo muito comido no Brasil?",
+        nivel: "1",
+        respostaA : "Estrogonofe",
+        respostaB : "Pizza",
+        respostaC : "Macarrão",
+        respostaD : "Pudim",
+        certa : "c"
+    },
+{
+        pergunta: "Qual o nome do cachorro do Superman?",
+        nivel: "2",
+        respostaA : "Krypto, O Supercão",
+        respostaB : "Martin, O Super Cachorro",
+        respostaC : "Klingon, O Super Próspero",
+        respostaD : "Rex, O Cão",
+        certa : "a"
+    },
+{
+        pergunta: "Entre as profundidades de 3000 metros e 6000 metros está a zona conhecida como?",
+        nivel: "1",
+        respostaA : "Cemitério dos Peixes",
+        respostaB : "Abismo Ocenânico",
+        respostaC : "Zona da Escuridão",
+        respostaD : "Zona Abissal",
+        certa : "d"
+    },
+{
+        pergunta: "Qual o nome do cientista que escreveu Uma Breve Histório do Tempo?",
+        nivel: "2",
+        respostaA : "Tony Hawk",
+        respostaB : "Stephen Hawking",
+        respostaC : "Stephen King",
+        respostaD : "Carl Sagan",
+        certa : "b"
+    },
+{
+        pergunta: "Qual o nome do irmão gêmeo do Mario do jogo Super Mario Bros.",
+        nivel: "1",
+        respostaA : "Felipe",
+        respostaB : "Bowser",
+        respostaC : "Luigi",
+        respostaD : "Wario",
+        certa : "c"
+    },
+{
+        pergunta: "Qual personagem do folclore brasileiro é uma cobra que cospe fogo?",
+        nivel: "3",
+        respostaA : "Boitatá",
+        respostaB : "Fogo Fátuo",
+        respostaC : "Curupira",
+        respostaD : "Fénix",
+        certa : "a"
+    },
+{
+        pergunta: "Quem é o pai de Zeus na Mitologia Gregra?",
+        nivel: "2",
+        respostaA : "Hércules",
+        respostaB : "Júpiter",
+        respostaC : "Kronos",
+        respostaD : "Mercúrio",
+        certa : "c"
+    },
+{
+        pergunta: "Em qual país o pintor Vincent van Gogh nasceu?",
+        nivel: "2",
+        respostaA : "Alemanha",
+        respostaB : "Holanda",
+        respostaC : "Brasil",
+        respostaD : "USA",
+        certa : "b"
+    },
+{
+        pergunta: "Qual o tamanho da muralha da china?",
+        nivel: "3",
+        respostaA : "21.196 Km",
+        respostaB : "12.560 Km",
+        respostaC : "5.845 Km",
+        respostaD : "987 Km",
+        certa : "a"
+    },
+{
+        pergunta: "Quantas moléculas de água, aproximadamente, há numa gota?",
+        nivel: "4",
+        respostaA : "2 sextilhões",
+        respostaB : "4 trilhões ",
+        respostaC : "100 bilhões",
+        respostaD : "300 decilhões",
+        certa : "a"
+    },
 ]
 
 let premios = [0, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 30000, 40000, 50000, 100000, 200000, 300000, 400000, 500000, 1000000];
@@ -158,47 +354,52 @@ let respostaC = document.getElementById('c');
 let respostaD = document.getElementById('d');
 let acertos = document.getElementById('acertos');
 let premio = document.getElementById('premio');
-let pontuacao = 0;
-let ultimaPergunta = 16;
-let perguntaAtual = 0;
-let contadorDePulos = 0;
-let premioTotal = 0;
+let imagem = document.getElementById('game-over-imagem');
 let mensagem = document.getElementById('mensagem');
 let conteudoQuiz = document.getElementById('quiz-conteudo');
 let popUp = document.getElementById('game-over');
 let reais = document.getElementsByClassName('reais');
 let perdeTudo = document.getElementById('perde-tudo');
+
+let pontuacao = 0;
+let ultimaPergunta = 16;
+let perguntaAtual = 0;
+let contadorDePulos = 0;
+let premioTotal = 0;
 let nivelAtual = 1;
-let imagem = document.getElementById('game-over-imagem');
 
-//Usando o algoritmo de Fisher-Yates para randomizar a array de perguntas. //
-
-function randomiza(array){
-    var indexAtual = array.length, valorTemporario, indexAleatorio;
-
-    while(0 !== indexAtual){
-        indexAleatorio = Math.floor(Math.random()*indexAtual);
-        indexAtual -= 1;
-
-        valorTemporario = array[indexAtual];
-        array[indexAtual] = array[indexAleatorio];
-        array[indexAleatorio] = valorTemporario;
-    }
-    return array;
-}
 
 function verificaNivel(){
-    if (0<perguntaAtual<6) {
+    if (0 <= pontuacao && pontuacao <= 4) {
         nivelAtual = 1;
     }
-    else if(5<perguntaAtual<11){
+    else if(5 <= pontuacao && pontuacao <= 9){
         nivelAtual = 2;
     }
-    else if (10<perguntaAtual<16) {
+    else if (10 <= pontuacao && pontuacao <= 14) {
         nivelAtual = 3;
     }
     else{
         nivelAtual = 4;
+    }
+    console.log(nivelAtual);
+}
+
+function randomInt(min, max) {
+    return min + Math.floor((max - min) * Math.random());
+}
+
+function achaPergunta(){
+    verificaNivel();
+    contador = 0;
+    while(contador<100000){
+        var indexDaPergunta = randomInt(0, perguntas.length);
+        var perguntaAleatoria = perguntas[indexDaPergunta];
+        if (perguntaAleatoria.nivel == nivelAtual){
+            return [perguntaAleatoria, indexDaPergunta];
+        }
+        contador++;
+        console.log(contador);
     }
 }
 
@@ -212,34 +413,37 @@ function printaPontos(){
     }
 }
 
-//Printa as perguntas na tela.
-function criaPergunta (){
+//Printa a pergunta atual na tela.
+function printaPergunta (){
+    var tuplePerguntaIndex = achaPergunta();
+    var indexDaPergunta = tuplePerguntaIndex[1];
+    perguntas.splice(indexDaPergunta, 1);
+    perguntaAtual = tuplePerguntaIndex[0];
 
     printaPontos();
 
-    let p = perguntas[perguntaAtual];
-    pergunta.innerHTML = "<h2>" + p.pergunta + "</h2>";
-    respostaA.innerHTML = "<p>" + p.respostaA + "</p>";
-    respostaB.innerHTML = "<p>" + p.respostaB + "</p>";
-    respostaC.innerHTML = "<p>" + p.respostaC + "</p>";
-    respostaD.innerHTML = "<p>" + p.respostaD + "</p>";
+    pergunta.innerHTML = "<p>" + perguntaAtual.pergunta + "</p>";
+    respostaA.innerHTML = "<p>" + perguntaAtual.respostaA + "</p>";
+    respostaB.innerHTML = "<p>" + perguntaAtual.respostaB + "</p>";
+    respostaC.innerHTML = "<p>" + perguntaAtual.respostaC + "</p>";
+    respostaD.innerHTML = "<p>" + perguntaAtual.respostaD + "</p>";
 }
+
 
 //Verifica as respostas.
 function verificaResposta(opcaoEscolhida){
     if(pontuacao < ultimaPergunta-1){
         //caso em que a pessoa acertou uma resposta comum.
-        if(perguntas[perguntaAtual].certa == opcaoEscolhida){
+        if(perguntaAtual.certa == opcaoEscolhida){
             pontuacao++;
             premioTotal = premios[pontuacao];
             acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
-            perguntaAtual++;
             document.getElementById(opcaoEscolhida).classList.add('respostaCerta');
             setTimeout(() => {
-                document.getElementById(opcaoEscolhida).classList.remove('respostaCerta');
+            document.getElementById(opcaoEscolhida).classList.remove('respostaCerta');
             }, 300);
             setTimeout(() => {
-                criaPergunta();
+                printaPergunta();
             }, 300);
         }
         //caso em que a pessoa errou uma resposta comum.
@@ -257,7 +461,7 @@ function verificaResposta(opcaoEscolhida){
     else if (pontuacao == ultimaPergunta-1) {
         
         //caso a pessoa tenha acertado a ultima pergunta.
-        if(perguntas[perguntaAtual].certa == opcaoEscolhida){
+        if(perguntaAtual.certa == opcaoEscolhida){
             pontuacao++;
             premioTotal = premios[pontuacao];
             acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
@@ -285,8 +489,7 @@ function verificaResposta(opcaoEscolhida){
 
 //Inicia o jogo.
 function jogo(){
-    randomiza(perguntas);
-    criaPergunta();  
+    printaPergunta();
 }
 
 //Inicia o jogo novamente.
@@ -304,12 +507,11 @@ function jogarNovamente(){
 
 //Pula uma pergunta, sendo que essa pergunta é considerada um acerto.
 function pularPergunta(){
-    if(contadorDePulos<1 && pontuacao < ultimaPergunta){
+    if(contadorDePulos<1 && pontuacao < ultimaPergunta-1){
         acertos.innerHTML = "<p> Você acertou " + pontuacao + " respostas!</p>";
         premio.innerHTML = "<p> Você acumulou " + premioTotal + " R$!</p>";
-        perguntaAtual++;
         contadorDePulos++;
-        criaPergunta();
+        printaPergunta();
     }
 }
 
@@ -318,7 +520,7 @@ function gameOver(opcaoEscolhida){
     conteudoQuiz.classList.add('esconder');
     popUp.classList.add('slide-up');
 
-    if(perguntas[perguntaAtual].certa == opcaoEscolhida){
+    if(perguntaAtual.certa == opcaoEscolhida){
         imagem.src = "./imagens/happy.jpg";
         mensagem.innerHTML="<p>Parabéns, você ganhou " + premioTotal + "</p>"
     }

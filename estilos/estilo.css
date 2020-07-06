@@ -44,37 +44,38 @@ button:focus{
 
 .logo{
     width: 600px;
-    margin-bottom: 10%;
+    margin-bottom: 130px;
     z-index: 0;
 }
 
 .logo-iniciar{
     width: 350px;
-    margin-bottom: 35%;
+    margin-bottom: 500px;
     margin-left: 40%;
     transition: margin-bottom 1s ease-out, margin-left 1s ease-out, width 1s ease-out;
 }
 
 .menu{
+    background-position-y: bottom;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     bottom: 0px;
     width: 100%;
-    height: 20%;
+    height: 150px;
     background-size: initial;
     background-repeat: repeat-x;
     background-image: url(../imagens/dinheiro3.png);
 }
 
 .menu button{
-    margin: 0 20px;
-    padding: 10px;
+    margin: 0 3%;
+    padding: 7px;
     background-color:blanchedalmond;
     color:darkolivegreen;
     border: 2px solid darkolivegreen;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .menu button:hover{
@@ -103,13 +104,12 @@ button:focus{
     align-items: center;
     height: 100vh;
     width: 40vw;
-    background-color: rgb(176, 176, 196);
-    color: rgba(4, 8, 58, 0.87);
+    background-color:#ecffd9;
     z-index: 2;
  }
 
  .quiz h2{
-     font-weight: bold;
+     font-weight: normal;
      font-size: 25px;
      font-family: 'Raleway';
      margin-bottom: 10px;
@@ -124,6 +124,8 @@ button:focus{
  }
 
  .pergunta{
+    -webkit-box-shadow: 1px 5px 16px 3px rgba(0,0,0,0.44); 
+    box-shadow: 1px 5px 16px 3px rgba(0,0,0,0.44);
      padding: 5%;
      width: 100%;
      display: flex;
@@ -133,25 +135,43 @@ button:focus{
      position: absolute;
      top: 0;
      height: 30%;
-     background-color: rgb(223, 223, 255);
+     color: #000015;
+     background-color: #d9ffb2;
  }
 
  .respostas{
-    width:80%;
- }
- .respostas button{
-    margin: 5px 0;
-    padding: 5px;
-    border: 0px solid rgb(0, 128, 0);
-    border-bottom: 2px solid darkgray;
-    border-radius: 10px;
-    width:100%;
-    background-color: rgb(241, 246, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 30vh;
+    height: 70vh;
  }
 
- .respostas button:first-child{
-    margin-top:20%;
-}
+ .opcoes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+ }
+
+ .respostas button{
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:4px 4px 8px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:4px 4px 8px 0px rgba(50, 50, 50, 0.75);
+    border: 0;
+    padding: 5px;
+    border-radius: 10px;
+    width:80%;
+    background-color: #defdbf;
+ }
+
+ .respostas button p{
+     font-weight: normal;
+ }
+
  .respostas button:hover{
      cursor: pointer;
      background-color: rgb(187, 190, 202);
@@ -164,6 +184,12 @@ button:focus{
 
 .respostaCerta{
     background-color: green!important;
+}
+
+.respostas p{
+    font-family: 'Raleway';
+    font-weight: 500;
+
 }
 
 .respostaErrada{
@@ -236,6 +262,7 @@ button:focus{
 }
 
 .pontos-principais{
+    line-height: 30px ;
     font-family: 'Raleway';
     font-size: 23px;
     display: flex;
@@ -245,7 +272,7 @@ button:focus{
     border-radius: 5px;
     width: 100%;
     height: 55%;
-    background-color: rgb(220, 216, 245);
+    background-color: #FFFF50;
 }
 
 .pontos-principais div{
@@ -261,6 +288,7 @@ button:focus{
 }
 
 .pontos-secundarios{
+    line-height: 18px;
     font-weight: 500;
     border-radius: 5px;
     font-family: 'Raleway';
@@ -272,13 +300,29 @@ button:focus{
 }
 
 .pontos-secundarios div{
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: rgb(210, 211, 252);
+    background-color: #FFFF50;
     height: 100%;
     width: 49%;
+}
+
+@media screen and (max-width: 768px){
+    .logo-iniciar{
+        display: none;
+    }
+    .pontos-iniciar{
+        display: none;
+    }
+    .quiz{
+        left: -100vw;
+    }
+    .quiz-iniciar{
+        width: 100%;
+    }
 }
