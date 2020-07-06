@@ -367,20 +367,58 @@ let perguntaAtual = 0;
 let contadorDePulos = 0;
 let premioTotal = 0;
 let nivelAtual = 1;
+let perguntasFacil = [];
+let perguntasMedio = [];
+let perguntasDificl = [];
+let perguntasFinal = [];
+
+
+function assignPerguntas(){
+    perguntasFacil = [];
+    perguntasMedio = [];
+    perguntasDificl = [];
+    perguntasFinal = [];
+}
+
+perguntas.forEach(element => {
+    if( element.nivel == 1){
+        perguntasFacil.push(element);
+    }
+    else if(element.nivel == 2){
+        perguntasMedio.push(element);
+    }
+    else if(element.nivel == 3){
+        perguntasDificl.push(element);
+    } 
+    else if(element.nivel == 4){
+        perguntasFinal.push(element);
+    }
+    else{
+        console.log("Deu pênis pra esse elemento aqui")
+    }
+});
 
 
 function verificaNivel(){
     if (0 <= pontuacao && pontuacao <= 4) {
-        nivelAtual = 1;
+        var tuple = achaPergunta(perguntasFacil);
+        perguntasFacil.splice(tuple[1], 1);
+        return tuple[0];
     }
     else if(5 <= pontuacao && pontuacao <= 9){
-        nivelAtual = 2;
+        var tuple = achaPergunta(perguntasMedio);
+        perguntasMedio.splice(tuple[1], 1);
+        return tuple[0];
     }
     else if (10 <= pontuacao && pontuacao <= 14) {
-        nivelAtual = 3;
+        var tuple = achaPergunta(perguntasDificl);
+        perguntasDificl.splice(tuple[1], 1);
+        return tuple[0];
     }
     else{
-        nivelAtual = 4;
+        var tuple = achaPergunta(perguntasDificl);
+        perguntasFinal.splice(tuple[1], 1);
+        return tuple[0];
     }
 }
 
@@ -388,17 +426,10 @@ function randomInt(min, max) {
     return min + Math.floor((max - min) * Math.random());
 }
 
-function achaPergunta(){
-    verificaNivel();
-    contador = 0;
-    while(contador<10000){
-        var indexDaPergunta = randomInt(0, perguntas.length);
-        var perguntaAleatoria = perguntas[indexDaPergunta];
-        if (perguntaAleatoria.nivel == nivelAtual){
-            return [perguntaAleatoria, indexDaPergunta];
-        }
-        contador++;
-    }
+function achaPergunta(listaDePerguntas){
+    var indexDaPergunta = Math.randomInt(0, listaDePerguntas.length);
+    var perguntaAleatoria = perguntas[indexDaPergunta];
+    return [perguntaAleatoria, indexDaPergunta];
 }
 
 function printaPontos(){
@@ -413,20 +444,17 @@ function printaPontos(){
 
 //Printa a pergunta atual na tela.
 function printaPergunta (){
-    var tuplePerguntaIndex = achaPergunta();
-    var indexDaPergunta = tuplePerguntaIndex[1];
-    perguntas.splice(indexDaPergunta, 1);
-    perguntaAtual = tuplePerguntaIndex[0];
+    perguntaAtual = verificaNivel();
+    p = perguntaAtual;
 
     printaPontos();
 
-    pergunta.innerHTML = "<p>" + perguntaAtual.pergunta + "</p>";
-    respostaA.innerHTML = "<p>" + perguntaAtual.respostaA + "</p>";
-    respostaB.innerHTML = "<p>" + perguntaAtual.respostaB + "</p>";
-    respostaC.innerHTML = "<p>" + perguntaAtual.respostaC + "</p>";
-    respostaD.innerHTML = "<p>" + perguntaAtual.respostaD + "</p>";
+    pergunta.innerHTML  = "<h2>"+ p.pergunta  + "</h2>";
+    respostaA.innerHTML = "<p>" + p.respostaA + "</p>";
+    respostaB.innerHTML = "<p>" + p.respostaB + "</p>";
+    respostaC.innerHTML = "<p>" + p.respostaC + "</p>";
+    respostaD.innerHTML = "<p>" + p.respostaD + "</p>";
 }
-
 
 //Verifica as respostas.
 function verificaResposta(opcaoEscolhida){
@@ -487,7 +515,8 @@ function verificaResposta(opcaoEscolhida){
 
 //Inicia o jogo.
 function jogo(){
-    printaPergunta();
+    assignPerguntas();
+    criaPergunta();
 }
 
 //Inicia o jogo novamente.
