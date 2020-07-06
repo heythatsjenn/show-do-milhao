@@ -378,8 +378,8 @@ function assignPerguntas(){
     perguntasMedio = []
     perguntasDificl = []
     perguntasFinal = []
-    perguntas.forEach(element => {
-        console.log(element);
+    for (let index = 0; index < perguntas.length; index++) {
+        element = perguntas[index];
         if( element.nivel == 1){
             perguntasFacil.push(element);
         }
@@ -394,8 +394,8 @@ function assignPerguntas(){
         }
         else{
             console.log("Deu pênis pra esse elemento aqui");
-        }console.log(perguntasFacil[0]);
-    });
+        }
+    }
 }
 
 
