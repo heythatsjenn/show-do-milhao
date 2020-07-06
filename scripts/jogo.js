@@ -15,7 +15,7 @@ let perguntas= [
         nivel: "1",
         respostaA : "Cuca",
         respostaB : "Curupira",
-        respostaC :"Boitatá",
+        respostaC :"Mula sem cabeça",
         respostaD : "Saci-Pererê",
         certa : "d"
     },
@@ -516,7 +516,7 @@ function verificaResposta(opcaoEscolhida){
 //Inicia o jogo.
 function jogo(){
     assignPerguntas();
-    criaPergunta();
+    printaPergunta();
 }
 
 //Inicia o jogo novamente.
