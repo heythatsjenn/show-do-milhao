@@ -6,7 +6,7 @@ Projeto front-end de um jogo do Show do Milhão para o processo seletivo de est�
 * CSS
 
 ## Como Acessar o Projeto
-Pelo link https://the-watchlist.vercel.com
+Pelo link https://show-do-milhao.vercel.app/
 
 ## Funcionalidades
 * Habilitar/tirar a música de fundo
