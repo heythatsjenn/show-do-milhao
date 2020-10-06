@@ -4,6 +4,7 @@ Projeto front-end de um jogo do Show do Milh√£o para o processo seletivo de est√
 * Javascript
 * HTML
 * CSS
+* Sass
 
 ## Como Acessar o Projeto
 Pelo link https://show-do-milhao.vercel.app/
